@@ -53,6 +53,13 @@ a {
   color: inherit;
 }
 
+section:not(:first-child, :nth-child(2)) {
+  position: relative;
+  opacity: 0;
+  z-index: 0;
+
+}
+
 /* End Global Rules */
 .header {
   width: 100%;
@@ -188,17 +195,6 @@ a {
   }
 }
 
-@keyframes up {
-  from {
-    opacity: 0;
-    transform: translateY(35px)
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(-5px)
-  }
-}
 
 @media(max-width: 767px) {
   .header .container {
@@ -272,18 +268,9 @@ a {
   transform: translateX(-50%);
   font-size: 40px;
   color: var(--main-color);
-  animation: i .6s infinite alternate;
+  animation: scroll-down .6s infinite alternate;
 }
 
-@keyframes i {
-  from {
-    transform: translateY(-20px);
-  }
-
-  to {
-    transform: translateY(20px);
-  }
-}
 
 /* End landing */
 
@@ -338,35 +325,7 @@ a {
   border-color: #fff;
 }
 
-@keyframes move-r {
-  50% {
-    height: 15px;
-    width: 15px;
-  }
 
-  100% {
-    height: 100%;
-    right: 0;
-    width: 50%;
-    border-radius: 0;
-  }
-}
-
-@keyframes move-l {
-
-  50% {
-    height: 15px;
-    width: 15px;
-
-  }
-
-  100% {
-    border-radius: 0;
-    left: 0;
-    height: 100%;
-    width: 50%;
-  }
-}
 
 /* End Main Titel */
 /* Start Article */
@@ -437,11 +396,6 @@ a {
   animation: arrow .6s infinite alternate;
 }
 
-@keyframes arrow {
-  100% {
-    transform: translateX(10px);
-  }
-}
 
 .spikes {
   position: relative;
@@ -506,19 +460,6 @@ a {
   animation: flash .5s both;
 }
 
-@keyframes flash {
-  from {
-    opacity: .2;
-    height: 0;
-    width: 0;
-  }
-
-  to {
-    opacity: 0;
-    height: 150%;
-    width: 150%;
-  }
-}
 
 .gallery .container .gallery-viwe .box:hover img {
   transform: rotateZ(5deg) scale(1.1)
@@ -1001,6 +942,7 @@ a {
 
 .skills .container .skill div span {
   height: 100%;
+  transition: .5s .6s;
   background: var(--main-color);
   position: absolute;
   z-index: 1;
@@ -1011,10 +953,11 @@ a {
 }
 
 
-.skills .container .skill h4::before {
-  content: attr(data);
+.skills .container .skill span::before {
+  content: attr(data-width);
   position: absolute;
-  right: 20px;
+  right: 0;
+  top: -30px;
   padding: 3px;
   color: var(--main-color);
   font-size: 13px;
@@ -1599,11 +1542,13 @@ footer {
   background: #222222;
   padding: 30px 0;
 }
-footer .container{
+
+footer .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 40px;
 }
+
 footer h1 {
   font-size: 60px;
 }
@@ -1620,19 +1565,25 @@ footer .social a {
   padding: 13px 5px;
   margin: 10px;
 }
-footer .social a:first-child:hover{
+
+footer .social a:first-child:hover {
   background: #0F70CA;
 }
-footer .social a:nth-of-type(2):hover{
-background: #55A4ED;
+
+footer .social a:nth-of-type(2):hover {
+  background: #55A4ED;
 }
-footer .social a:last-child:hover{
-background: #32618D;
+
+footer .social a:last-child:hover {
+  background: #32618D;
 }
+
 footer .info i {
-    color: #fff;;
-font-size: 30px;
+  color: #fff;
+  ;
+  font-size: 30px;
 }
+
 footer .info p {
   line-height: 1.8;
 }
@@ -1652,9 +1603,11 @@ footer .links a {
   padding: 10px;
   transition: .3s;
 }
-footer .links a:not(:last-child){
+
+footer .links a:not(:last-child) {
   border-bottom: 1px solid dimgray;
 }
+
 footer .links a:hover {
   padding-left: 40px;
 }
@@ -1666,17 +1619,21 @@ footer .links a i {
 footer i {
   color: var(--main-color);
 }
+
 footer .contact {
   padding: 15px;
   line-height: 1.8;
 }
-footer .contact div{
+
+footer .contact div {
   margin: 20px auto;
 }
+
 footer .contact i {
   font-size: 25px;
 }
-footer .imgs{
+
+footer .imgs {
   display: grid;
   grid-template-columns: repeat(auto-fill, 90px);
   gap: 5px;
@@ -1684,21 +1641,26 @@ footer .imgs{
   justify-content: center;
   margin: auto;
 }
-footer .imgs .box{
+
+footer .imgs .box {
   padding: 5px;
   background: #fff;
 }
-footer img{
+
+footer img {
   height: 100%;
   width: 100%;
 }
-footer hr{
+
+footer hr {
   margin: 20px 0;
   background: gray;
 }
-footer p:last-child span{
+
+footer p:last-child span {
   font: italic bold 18px inherit inherit;
   color: var(--main-color);
   padding: 5px;
 }
+
 /* End Footer */
