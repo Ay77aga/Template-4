@@ -1,0 +1,35 @@
+.view-img {
+  padding: 5px;
+  width: 99vw;
+  height: 60vh;
+  left: 50%;
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transition: .3s;
+  border: 2px solid var(--main-color);
+  transform: translate(-50%, -50%) scale(0);
+  background: var(--main-color);
+}
+
+.v {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.view-img::before {
+  content: " Click To Remove";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: red;
+  font-weight: bold;
+  font-size: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.view-img img {
+  width: 100%;
+  height: 100%;
+}
