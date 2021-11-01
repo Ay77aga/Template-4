@@ -103,5 +103,5 @@ imgs.forEach((img) => {
 });
 // remov view
 view.addEventListener('click', () => {
-  view.classList.remove('v')
+  view.classList.remove('v');
 });
