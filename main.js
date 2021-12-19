@@ -39,7 +39,7 @@ window.addEventListener('scroll', function() {
 
 // Start Count Down
 
-let countDownDate = new Date("Nov 30, 2021 23:59:59").getTime();
+let countDownDate = new Date("Dec 31, 2021 23:59:59").getTime();
 
 let counter = setInterval(() => {
   // Get Date Now
@@ -104,4 +104,4 @@ imgs.forEach((img) => {
 // remov view
 view.addEventListener('click', () => {
   view.classList.remove('v');
-});
+})
