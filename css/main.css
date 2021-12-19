@@ -30,7 +30,7 @@ html {
 }
 
 :root {
-  --main-color: #329d9c;
+  --main-color: #46A3BB;
   --main-bg: #ececec;
 }
 
@@ -1695,6 +1695,7 @@ footer p:last-child span {
   position: fixed;
   height: 7px;
   top: 0;
+  z-index: 999999;
   width: 100%;
   background: #5050507A;
   backdrop-filter: blur(8px);
