@@ -1693,7 +1693,7 @@ footer p:last-child span {
 
 .calc-scroll {
   position: fixed;
-  height: 5px;
+  height: 7px;
   top: 0;
   width: 100%;
   background: #5050507A;
