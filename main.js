@@ -20,7 +20,7 @@
 
  // Calc Scrolling
  let progress = document.querySelector('.progress');
- let scroll = document.querySelector('#r-discount').offsetTop + 100;
+ let scroll = document.querySelector('#r-discount').offsetTop ;
 
 
  window.addEventListener('scroll', function() {
