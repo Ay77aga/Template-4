@@ -1,7 +1,7 @@
 .view-img {
   padding: 5px;
   width: 99vw;
-  height: 60vh;
+  height: 80vh;
   left: 50%;
   top: 50%;
   left: 50%;
@@ -19,7 +19,7 @@
 .view-img::before {
   content: " Click To Remove";
   position: absolute;
-  top: -20%;
+  top: -10%;
   left: 50%;
   transform: translateX(-50%);
   color: red;
