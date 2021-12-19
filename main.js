@@ -1,3 +1,13 @@
+ // menu
+ let ul_2 =document.querySelector('.ul-2');
+let links = document.querySelector('.menu');
+ul_2.addEventListener('click',()=>{
+  links.classList.toggle('show-ul2')
+})
+
+
+
+
 let section = document.querySelector('.skills');
 let span = document.querySelectorAll('.skill span');
 let sections = document.querySelectorAll('.s');

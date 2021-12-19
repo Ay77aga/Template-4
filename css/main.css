@@ -99,103 +99,57 @@ section:not(:first-child, :nth-child(2)) {
   width: 100%;
 }
 
-.menu .links>li a::before {
-  display: none;
-}
-
-.ul-2 .menu .links {
-  display: none;
-  overflow: hidden;
-}
-
-.ul-2:hover .links {
-  display: block;
-  animation: up .5s both;
-}
-
-.menu .links {
-  position: absolute;
-  top: 35px;
-  right: 15%;
-  z-index: 1;
-  width: 70%;
-  height: auto;
+.menu {
+  top: 50px;
+   border: 3px solid;
+ z-index: 99;
+  border-color: var(--main-color) transparent var(--main-color) transparent;
+  width: 80%;
   background: #fff;
+  position: absolute;
+  display: none;
+
+}
+
+.other-links {
   display: flex;
-  border-top: 2px solid var(--main-bg);
-  border-bottom: 2px solid var(--main-color);
   justify-content: space-between;
-  padding-bottom: 0;
+  flex-wrap: wrap;
+
 }
 
-.menu .links li {
-  display: inline-block;
-  width: calc(98% / 2);
-  cursor: pointer;
-  font-size: 18px;
-  padding: 0;
-  font-weight: 900;
-  position: relative;
+.other-links li {
+  width: calc(90% / 2);
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.menu .links li {
-  border-top: 1px solid darkgrey
-}
-
-.menu .links li a {
+.other-links li a {
   display: block;
   padding: 3px;
-  color: var(--main-color);
-  text-align: left;
-  width: 100%;
-  position: relative;
 }
-
-.menu .links li::before,
-.menu .links li::after {
-  content: "";
-  position: absolute;
-  transition: .3s;
-  top: 0;
-  z-index: 0;
-  height: 100%;
-  width: 0;
-  background: #ddd;
-}
-
-.menu .links li::before {
-  left: 0
-}
-
-.menu .links li::after {
-  right: 0;
-}
-
-.menu .links li:hover::before,
-.menu .links li:hover::after {
-  width: 50%;
-
-}
-
-.menu .links li a i {
-  width: 30px
-}
-
 
 @media(max-width: 767px) {
-  .menu .links {
-    width: 100%;
-    left: 0;
-    border-bottom: 3px solid var(--main-color);
-    top: 75px;
+  .menu {
+    width: 99%;
+    top: 80px;
   }
 
-  .menu .links li {
-    display: block;
+  .other-links {
+    height: calc(100vh - 80px);
+    flex-direction: column;
+  }
+
+  .other-links li {
     width: 100%;
   }
 }
 
+.show-ul2 {
+  display: block;
+  animation: up 1s .2s both;
+}
 
 @media(max-width: 767px) {
   .header .container {
@@ -1713,8 +1667,8 @@ footer p:last-child span {
   height: 5px;
   top: 0;
   width: 100%;
-    background: #5050507A;
-backdrop-filter: blur(8px);
+  background: #5050507A;
+  backdrop-filter: blur(8px);
   top: 0;
 }
 
