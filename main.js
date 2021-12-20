@@ -1,8 +1,8 @@
  // menu
  let ul_2 = document.querySelector('.ul-2');
  let links = document.querySelector('.menu');
- 
- 
+
+
  ul_2.addEventListener('click', () => {
    links.classList.toggle('show-ul2')
  })
@@ -20,7 +20,7 @@
 
  // Calc Scrolling
  let progress = document.querySelector('.progress');
- let scroll = document.querySelector('#r-discount').offsetTop ;
+ let scroll = document.querySelector('#r-discount').offsetTop;
 
 
  window.addEventListener('scroll', function() {
@@ -63,8 +63,11 @@
    // Get Time Units
    // let days = Math.floor(dateDiff / 1000 / 60 / 60 / 24);
    let days = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
+
+
    let hours = Math.floor((dateDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
    let minutes = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
+   // console.log(dateDiff % (1000 * 60) / 1000)
    let seconds = Math.floor((dateDiff % (1000 * 60)) / 1000);
 
    document.querySelector(".d").innerHTML = days < 10 ? `0${days}` : days;
@@ -84,6 +87,7 @@
      behavior: "smooth",
    })
  });
+
  let inputs = document.querySelectorAll('input:not([type=submit])');
  let submits = document.querySelectorAll('[type=submit]');
  submits.forEach((submit) => {
