@@ -105,11 +105,11 @@ section:not(:first-child, :nth-child(2)) {
   z-index: 99;
   border-color: var(--main-color) transparent var(--main-color) transparent;
   width: 80%;
-  margin: auto;
   background: #fff;
   position: absolute;
   display: none;
-
+  left: 50%;
+  transform: translateX(-50%)
 }
 
 .other-links {
@@ -162,7 +162,6 @@ section:not(:first-child, :nth-child(2)) {
   .menu {
     width: 99%;
     top: 80px;
-    left: 0;
   }
 
   .other-links {

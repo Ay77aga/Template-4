@@ -1,12 +1,12 @@
 @keyframes up {
   from {
     opacity: 0;
-    transform: translateY(35px)
+    transform: translatY(-50%, 35px)
   }
 
   to {
     opacity: 1;
-    transform: translateY(-5px)
+    transform: translate(-50%, -10px)
   }
 }
 
