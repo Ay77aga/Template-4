@@ -101,7 +101,8 @@ section:not(:first-child, :nth-child(2)) {
 
 .menu {
   top: 50px;
-  border: 3px solid;
+  border-style: solid;
+  border-width: 3px 0;
   z-index: 99;
   border-color: var(--main-color) transparent var(--main-color) transparent;
   width: 80%;
@@ -111,6 +112,7 @@ section:not(:first-child, :nth-child(2)) {
   left: 50%;
   transform: translateX(-50%)
 }
+
 
 .other-links {
   display: flex;
@@ -160,7 +162,7 @@ section:not(:first-child, :nth-child(2)) {
 
 @media(max-width: 767px) {
   .menu {
-    width: 99%;
+    width: 100%;
     top: 80px;
   }
 
