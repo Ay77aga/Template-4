@@ -199,7 +199,7 @@ section:not(:first-child, :nth-child(2)) {
 .landing {
   background: var(--main-bg);
   position: relative;
-  height: calc(100vh - 78px);
+  height: calc(100vh - 80px);
   overflow: hidden;
 }
 
@@ -228,12 +228,15 @@ section:not(:first-child, :nth-child(2)) {
 .landing::before {
   content: "";
   position: absolute;
-  bottom: -120px;
-  right: -20px;
-  background: #fff;
-  height: 200px;
-  width: 110vw;
-  transform: rotateZ(-9deg);
+  bottom: 0;
+  height: 0;
+  display: block;
+  width: 0;
+  border-style: solid;
+  border-width: 0 0 30vw 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  border-color: transparent transparent #fff transparent;
 }
 
 @media(max-width: 767px) {
