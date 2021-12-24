@@ -23,7 +23,7 @@ html {
   scroll-behavior: smooth;
 }
 
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box
@@ -116,7 +116,7 @@ section:not(:first-child, :nth-child(2)) {
 
 .other-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 
 }
@@ -125,41 +125,45 @@ section:not(:first-child, :nth-child(2)) {
   width: calc(90% / 2);
   color: var(--main-color);
   font-weight: bold;
+  position: relative;
   font-size: 20px;
+  cursor: pointer;
 }
-
+.other-links li:hover{
+  background: #E6E6E6;
+}
 .other-links li a {
   display: block;
-  padding: 3px;
-  position: relative;
+  cursor: none;
 }
 
-.other-links li a::before,
-.other-links li a::after {
+.other-links li::before,
+.other-links li::after {
   content: "";
   position: absolute;
   width: 0;
   height: 100%;
-  top: 0;
+  height: 3px;
   background: var(--main-color);
-  opacity: .5;
-  transition: .5s;
+  /* opacity: .5; */
+  transition: .8s ease-out;
+  border-radius: 2rem;
 }
 
-.other-links li a::before {
-  left: 0;
-}
 
-.other-links li a::after {
+.other-links li:hover::after,
+.other-links li:hover::before {
+  width: 70%;
+
+}
+.other-links li::after{
+   top: 0;
+ left: 0;
+}
+.other-links li::before {
   right: 0;
+  bottom: 0;
 }
-
-.other-links li:hover a::after,
-.other-links li:hover a::before {
-  width: 50%;
-
-}
-
 @media(max-width: 767px) {
   .menu {
     width: 100%;
