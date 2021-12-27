@@ -21,7 +21,7 @@
 }
 
 @keyframes move-r {
-  50% {
+  60% {
     height: 15px;
     width: 15px;
   }
@@ -36,7 +36,7 @@
 
 @keyframes move-l {
 
-  50% {
+  60% {
     height: 15px;
     width: 15px;
 
