@@ -4,8 +4,8 @@
 
 
  ul_2.addEventListener('click', () => {
-   links.classList.toggle('show-ul2')
- })
+   links.classList.toggle('show-ul2');
+ });
 
 
 
@@ -95,7 +95,7 @@
      inputs.forEach(input => {
        if (input.value == '') {
          e.preventDefault();
-         console.log(true)
+         // console.log(true)
        }
      });
    });
@@ -120,4 +120,4 @@
  // remov view
  view.addEventListener('click', () => {
    view.classList.remove('v');
- })
+ });

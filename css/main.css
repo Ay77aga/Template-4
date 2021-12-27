@@ -32,6 +32,7 @@ html {
 :root {
   --main-color: #46A3BB;
   --main-bg: #ececec;
+  --s_font: s_font;
 }
 
 ::selection {
@@ -39,10 +40,12 @@ html {
   color: #fff;
   font-weight: bold;
 }
+
 @font-face {
   font-family: s_font;
   src: url("../webfonts/Pushster-Regular.ttf");
 }
+
 body {
   font-family: Tahoma, Helvetica, sans-serif;
 }
@@ -83,6 +86,7 @@ section:not(:first-child, :nth-child(2)) {
 .landing .container div h2 {
   font-size: 30px;
   color: var(--main-color);
+  font-family: var(--s_font);
 }
 
 .header .container ul {
@@ -136,7 +140,7 @@ section:not(:first-child, :nth-child(2)) {
   position: relative;
   font-size: 20px;
   cursor: pointer;
-  font-family: s_font;
+  font-family: var(--s_font);
 }
 
 .other-links li:hover {
@@ -292,12 +296,14 @@ section:not(:first-child, :nth-child(2)) {
   width: fit-content;
   position: relative;
   font-weight: bold;
-  font-family: s_font;
+  font-family: var(--s_font);
   letter-spacing: 3px;
 }
-.titel::first-letter{
+
+.titel::first-letter {
   color: orange;
 }
+
 .titel::before,
 .titel::after {
   content: "";
@@ -373,6 +379,7 @@ section:not(:first-child, :nth-child(2)) {
 
 .article .container .art h2 {
   margin-top: 10px;
+  font-family: var(--s_font);
   color: var(--main-color);
 }
 
@@ -537,6 +544,7 @@ section:not(:first-child, :nth-child(2)) {
   margin: auto;
   position: relative;
   padding: 10px;
+  font-family: var(--s_font);
 }
 
 .features .container .feats .feat h1::before {
@@ -668,6 +676,7 @@ section:not(:first-child, :nth-child(2)) {
 .testimonials .container .chars .avatar h2 {
   padding-bottom: 5px;
   color: var(--main-color);
+  font-family: var(--s_font);
 }
 
 .testimonials .container .chars .avatar p {
@@ -1140,7 +1149,9 @@ section:not(:first-child, :nth-child(2)) {
   position: relative;
   border-radius: 6px;
 }
-
+.events .container .count div span{
+  font-family: var(--s_font);
+}
 .events .container .count div::before {
   content: "";
   position: absolute;
@@ -1274,6 +1285,7 @@ section:not(:first-child, :nth-child(2)) {
 
 .pric .container .plans .plan h2 {
   padding: 10px;
+  font-family: var(--s_font);
 }
 
 .pric .container .plans .plan h1 {
@@ -1539,7 +1551,9 @@ section:not(:first-child, :nth-child(2)) {
   text-align: center;
 
 }
-
+#r-discount form h1{
+  font-family: var(--s_font);
+}
 #r-discount .container form input,
 textarea {
   width: 100%;
@@ -1549,7 +1563,6 @@ textarea {
   border-bottom: 1px solid gray;
   background: #f6f6f6;
   border-radius: 10px;
-  ;
 }
 
 #r-discount .container form input:focus,
@@ -1622,7 +1635,8 @@ footer .info p {
 
 footer h1 {
   font-size: 60px;
-  color: var(--main-color);
+    font-family: var(--s_font);
+color: var(--main-color);
 }
 
 footer .links {
@@ -1716,7 +1730,7 @@ footer p:last-child span {
 }
 
 .show {
- right: 10px;
+  right: 10px;
   bottom: 10px;
   transform: scale(1) rotateZ(0);
 }
