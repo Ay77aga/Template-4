@@ -330,16 +330,16 @@ section:not(:first-child, :nth-child(2)) {
 }
 
 .titel:hover::before {
-  animation: move-r .3s both ease-out;
+  animation: move-r .5s both ease-out;
 }
 
 .titel:hover::after {
-  animation: move-l .3s both ease-out;
+  animation: move-l .5s both ease-out;
 }
 
 .titel:hover {
   color: #fff;
-  transition: .3s .3s;
+  transition: .3s .5s;
   border-color: #fff;
 }
 
