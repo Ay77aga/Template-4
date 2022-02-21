@@ -12,7 +12,7 @@
 
  let section = document.querySelector('.skills');
  let span = document.querySelectorAll('.skill span');
- let sections = document.querySelectorAll('section:not(:first-child, :nth-child(2))');
+ let sections = document.querySelectorAll('section:not(:first-child, :nth-child(2)) .container div:not(.popular),footer a,.box img');
  // Go to top btn
  let btn = document.createElement('i');
  btn.classList = 'fa fa-arrow-up to-top'
@@ -32,12 +32,6 @@
    }
 
    // Animation show Section
-   sections.forEach((section) => {
-     if (scrollY >= section.offsetTop - 500) {
-       section.style.animation = `
-      show-section 1.6s both linear`;
-     }
-   });
    // Scroll To to Btn
    if (scrollY >= 1000) {
      btn.classList.add('show');
@@ -51,7 +45,7 @@
 
  // Start Count Down
 
- let countDownDate = new Date("Jan 9, 2022 12:59:59").getTime();
+ let countDownDate = new Date("Jan 9, 2023 12:59:59").getTime();
 
  let counter = setInterval(() => {
    // Get Date Now
@@ -121,3 +115,12 @@
  view.addEventListener('click', () => {
    view.classList.remove('v');
  });
+    sections.forEach((section) => {
+     if (scrollY >= section.offsetTop - 500) {
+       // section.style.animation = `show-section 1s both`;
+     }
+     section.setAttribute("data-aos", "fade-down-right");
+   });
+
+
+ AOS.init();
