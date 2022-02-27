@@ -12,7 +12,7 @@
 
  let section = document.querySelector('.skills');
  let span = document.querySelectorAll('.skill span');
- let sections = document.querySelectorAll('section:not(:first-child, :nth-child(2)) .container div:not(.popular),footer a,.box img');
+ let sections = document.querySelectorAll('section:not(:first-child, :nth-child(2)) .container div:not(.popular),footer a,.box img,i');
  // Go to top btn
  let btn = document.createElement('i');
  btn.classList = 'fa fa-arrow-up to-top'
